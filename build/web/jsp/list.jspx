@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <html>
+         <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>Main page - publications</title>
+            <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+        </head>
+    
+       <body>
+
+        <div id="templatemo_wrapper_outer">
+            <div id="templatemo_wrapper">
+                <jsp:include page="../jsp_include/header.jspx" />
+                <jsp:include page="../jsp_include/banner_main.jspx" /> 
+                
+                <div id="templatemo_content_wrapper">    
+                    <div id="content">
+                    <!-- Main -->        
+                        <jsp:include page="../jsp_include/list.jspx" />            
+                    </div>
+                
+                    <div id="sidebar">
+                        <!-- Right -->            
+                        <jsp:include page="../jsp_include/right_menu.jspx" />
+                    </div>
+      	
+                    <div class="cleaner"></div>
+    	
+                </div> <!-- end of templatemo_content -->  
+         
+            <jsp:include page="../jsp_include/footer.jspx" />    
+            <jsp:include page="../jsp_include/copyright.jspx" />
+            
+            </div> <!-- end of templatemo_wrapper -->
+        </div>
+            
+    </body>
+    
+  </html>  
+    
+</jsp:root>

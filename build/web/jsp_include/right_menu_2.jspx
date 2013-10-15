@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : right_menu
+    Created on : 13.10.2013, 14:10:51
+    Author     : Nexus
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"           
+          xmlns:c="http://java.sun.com/jsp/jstl/core" 
+          xmlns:tag="/WEB-INF/bodytag.tld"
+          version="2.0">
+    
+    
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN</jsp:attribute>
+                
+                      
+                <h2 class="news">Publications</h2>
+            
+      		<div class="news_section">
+                    
+                   
+                    
+            
+                <div class="news_box">
+                    <h3><a href="#">По жанрам</a></h3>
+                    
+                           
+                  <div class="news_box">  
+                    <br /><br />
+                    <div class="date">Details </div>
+                        
+                    <br />
+                  </div>  
+                    
+                 </div>      
+                
+                </div>   
+                
+                
+                <h2 class="news">Information</h2>
+            
+      		<div class="news_section">
+            
+                <div class="news_box">
+                    <h3><a href="#">User info</a></h3>
+                             
+                    
+                    <h3>${ID_MESSAGE}: <c:out value="${id}" /></h3>
+                    <h3>${NAME_MESSAGE}: <c:out value="${userName}" /></h3>
+                    <h3>${SURNAME_MESSAGE}: <c:out value="${userSurname}" /></h3>
+                    <h3>${LOGIN_MESSAGE}: <c:out value="${userLogin}" /></h3>
+                    <h3>${USERTYPE_MESSAGE}: <c:out value="${userType}" /></h3>
+                    <h3>${BALANCE_MESSAGE}: <c:out value="${userBalance}" /> UAH</h3>
+                    
+                  </div>
+                           
+                  <div class="news_box">                    
+                        <br /><br />
+                        <div class="date">Details</div><br />
+                  </div>  
+                    
+              </div>   
+                
+                
+                
+                
+                
+                <h2 class="news">History</h2>
+            
+      		<div class="news_section">
+            
+                <div class="news_box">
+                    <h3><a href="#">My orders</a></h3>
+                    
+                    
+                           
+                  <div class="news_box">
+                    <br /><br />
+                    <div class="date">Details </div>
+                        
+                    <br />
+                  </div>  
+                    
+                 </div>      
+                
+                </div>  
+                
+                
+                
+          
+                
+                
+        
+    </jsp:element>
+
+</jsp:root>

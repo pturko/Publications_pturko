@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : jsp_header
+    Created on : 13.10.2013, 14:18:28
+    Author     : Nexus
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN</jsp:attribute>
+                
+        <div id="temmplatmeo_header">
+    
+   		<div id="site_title">
+           	<a href="#" target="_parent">
+            	Publications<span>System of best publications</span>
+            </a>
+        </div>
+    
+    	<div id="templatemo_menu">
+        
+            <ul>
+                
+                
+                 <table id="panel_user" valign="center" width="500" height="10px" border='0'>
+                    <tbody>
+                        <tr>
+                        
+                     <td width="100px" align="center"><form name="loginForm" method="POST" action="controller">
+                        <br /><input type="hidden" name="command" value="list"/>                       
+                        <input class="classbutton" type="submit" value="${PUBLICATIONS_MESSAGE}"/>
+                    </form></td>
+                
+                    <td width="100px" align="center"><form name="loginForm" method="POST" action="controller">
+                        <br /><input type="hidden" name="command" value="orders"/>                       
+                        <input class="classbutton" type="submit" value="${ORDERS_MESSAGE}"/>
+                    </form></td> 
+                    
+                    <td width="100px" align="center"><form name="loginForm" method="POST" action="controller">
+                        <br /><input type="hidden" name="command" value="account"/> 
+                        <input type="hidden" name="user_id" value="${id}"/> 
+                        <input class="classbutton" type="submit" value="${ACCOUNT_MESSAGE}"/>
+                    </form></td>                    
+                    
+                    <td width="100px" align="center"><form name="loginForm" method="POST" action="controller">
+                        <br /><input type="hidden" name="command" value="history"/>                       
+                        <input class="classbutton" type="submit" value="${HISTORY_MESSAGE}"/>
+                    </form></td>     
+                   
+                    <td width="100px" align="center"><form name="loginForm" method="POST" action="index.jspx">
+                        <br /><input class="classbutton" type="submit" value="${EXIT_MESSAGE}"/>
+                    </form></td>
+                
+                    </tr>                    
+                    </tbody>
+                </table> 
+                    
+                    
+                
+                
+                
+           
+                <li><a href="#" class="current">Home</a></li>
+              
+                <li><a href="#" target="_parent" value="list">Publications</a></li>
+                <li><a href="#">Info</a></li>
+             <!--   
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Exit</a></li>
+              -->  
+            </ul>    	
+        
+        </div> <!-- end of templatemo_menu -->
+    
+    </div> <!-- end of templatemo_header -->
+    
+    
+    
+    </jsp:element>
+
+</jsp:root>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : right_menu
+    Created on : 13.10.2013, 14:10:51
+    Author     : Nexus
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core" 
+          
+          
+          version="2.0">
+    
+    
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN</jsp:attribute>
+                
+        
+        
+                <h2 class="news">Login</h2>
+            
+      		<div class="news_section">
+            
+                <div class="news_box">
+                    <h3><a href="#">Авторизируйтесь</a></h3>
+                 
+                    
+                   <form name="loginForm" method="POST" action="controller">
+                        <input type="hidden" name="command" value="login"/>
+                        <c:out value="${LOGIN_MESSAGE}" />:<br/>
+                        <input type="text" name="login" value="root"/><br/><br/>
+                        <c:out value="${PASSWORD_MESSAGE}" />:<br/>
+                        <input type="password" name="password" value="root"/><br/><br/><br/>
+                        <br/>
+                        <input class="classbutton" type="submit" value="${SUBMIT_MESSAGE}"/>
+                    </form>
+            
+                  </div>
+                           
+                  <div class="news_box">  
+                    <div class="date">Forgot password </div>
+                        
+                    <br />
+                  </div>  
+                    
+              </div>      
+                
+                
+                
+                
+                
+                
+                
+                <h2 class="news">Information</h2>
+            
+      		<div class="news_section">
+            
+                <div class="news_box">
+                    <h3><a href="#">User info</a></h3>
+                 
+                    
+                    
+            
+                  </div>
+                           
+                  <div class="news_box">                    
+                        <br /><br />
+                        <div class="date">Details</div><br />
+                  </div>  
+                    
+              </div>       
+        
+    </jsp:element>
+
+</jsp:root>

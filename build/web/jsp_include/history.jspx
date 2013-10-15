@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+                <h3>${HISTORY_MESSAGE}</h3>
+                
+                <h3><c:out value="${user}" /></h3>
+                
+                <center>
+                <table width="590" border='1'>
+                    <tbody>
+                        
+                    <c:forEach items="${list}" var="element">
+                        <tr><td width="430"><c:out value="${element.key}" /></td>
+                            <td align="center" width="160"><c:out value="${element.value}" /></td>
+                        </tr>
+                        
+                    </c:forEach> 
+                
+                    </tbody>
+                </table> 
+                </center>
+                
+                
+                <br /><br />
+                
+                <center>
+              
+                <form name="loginForm" method="POST" action="controller">
+                    <input type="hidden" name="command" value="login"/>                       
+                    <input class="classbutton" type="submit" value="${MAIN_MESSAGE}"/>
+                </form> 
+                    
+                        
+                </center>
+                   
+</jsp:root>

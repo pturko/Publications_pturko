@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+                                                
+                <h3>${ORDERS_MESSAGE}</h3>
+                
+                <h3><c:out value="${user}" /></h3>
+                
+                <center>
+                <table width="550" border='3'>
+                    <tbody>
+                        
+                    <c:forEach items="${list}" var="element">
+                        <tr><td width="450"><c:out value="${element.key}" /></td>
+                            <td align="center" width="60"><c:out value="${element.value}" /> UAH</td>
+                            <!--<td align="center">
+                                <form name="loginForm" method="POST" action="controller">
+                                    <input type="hidden" name="command" value="orders_info"/>  
+                                    <input type="hidden" name="publ_id" value="${element.key}"/>                                      
+                                    <input class="classbutton" type="submit" value="View"/>
+                                </form>                                
+                            </td>-->
+                        </tr>
+                        
+                    </c:forEach> 
+                
+                    </tbody>
+                </table> 
+                </center>
+                
+                
+                <br /><br />
+                ${SUMM_MESSAGE}: <c:out value="${summ}" /><br /><br />
+                ${BALANCE_MESSAGE}: <c:out value="${balance}" /><br /><br />
+ 
+                 <center>
+                <br /><br /><br />
+                <table width="450px" border='0'>
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                        
+                    <form name="loginForm" method="POST" action="controller">
+                        <input type="hidden" name="command" value="login"/>                       
+                        <input class="classbutton" type="submit" value="${MAIN_MESSAGE}"/>
+                    </form> 
+                
+                    </td><td align="center">
+                                
+                    <form name="loginForm" method="POST" action="controller">
+                        <input type="hidden" name="command" value="orders_cancel"/>                       
+                        <input class="classbutton" type="submit" value="${CANCEL_ALL_MESSAGE}"/>
+                    </form>
+                    
+                    </td><td align="center">
+                                
+                    <form name="loginForm" method="POST" action="controller">
+                        <input type="hidden" name="command" value="buy"/>                       
+                        <input class="classbutton" type="submit" value="${SUBSCRIBE_MESSAGE}"/>
+                    </form>
+                        
+                        
+                                      </td>
+                 </tr>
+                     </tbody>
+                </table> 
+           </center>
+        
+
+</jsp:root>
